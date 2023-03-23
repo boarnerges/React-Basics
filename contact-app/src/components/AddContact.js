@@ -1,19 +1,41 @@
 import React, { Component } from "react";
 
 export class AddContact extends Component {
+  state = {
+    name: "",
+    email: "",
+  };
+
+  add = (e) => {
+    e.preventDedault();
+    if(this.state.name === "" &&)
+  };
+
   render() {
     return (
       <div className="ui main">
         <h2>Add Contact</h2>
-        <form className="ui form">
+        <form className="ui form" onSubmit={this.add}>
           <div className="field">
             <label>Name</label>
-            <input type="text" name="name" placeholder="Name" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={this.state.name}
+              onChange={(e) => this.setState({ name: e.target.value })}
+            />
           </div>
 
           <div className="field">
             <label>Email</label>
-            <input type="text" name="email" placeholder="Email" />
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={(e) => this.setState({ email: e.target.value })}
+            />
           </div>
         </form>
 
