@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const ContactCard = () => {
   return (
-    <div>ContactCard</div>
-  )
-}
+    <div className="item">
+      <div className="content">
+        <div className="header">{contact.name}</div>
+        <div>{contact.email}</div>
+      </div>
+      <i className="trash alternate outline icon" style={{}}></i>
+    </div>
+  );
+};
 
-export default ContactCard
+export default ContactCard;
