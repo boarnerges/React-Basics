@@ -8,7 +8,7 @@ export class AddContact extends Component {
 
   add = (e) => {
     e.preventDefault();
-    if (this.state.name === ""  this.state.email === "") {
+    if (this.state.name === "" || this.state.email === "") {
       alert("All the fields are mandatory!!");
       return;
     }
@@ -42,9 +42,8 @@ export class AddContact extends Component {
               onChange={(e) => this.setState({ email: e.target.value })}
             />
           </div>
+          <button className="ui button blue">Add</button>
         </form>
-
-        <button className="ui button blue"></button>
       </div>
     );
   }
