@@ -4,6 +4,7 @@ import Welcome from "./components/Welcome";
 import Clock from "./components/Clock";
 import { useState } from "react";
 import LoginControl from "./components/LoginControl";
+import Blog from "./components/Blog";
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -12,6 +13,23 @@ function App() {
     lastname: "Olusegun",
   };
 
+  const posts = [
+    {
+      id: 1,
+      title: "Hello World",
+      content: "Welcome to learning React!",
+    },
+    {
+      id: 2,
+      title: "Installation",
+      content: "You can install React from npm",
+    },
+    {
+      id: 3,
+      title: "Run App",
+      content: "You can run React app with npm start",
+    },
+  ];
   const toggle = () => {
     console.log("Toggle Clicked");
     setFlag(!flag);
@@ -25,7 +43,8 @@ function App() {
       {/* <Welcome user="James" /> */}
       {/* <Welcome user="Owolabi" />  */}
 
-      <LoginControl />
+      {/* <LoginControl /> */}
+      <Blog posts={posts} />
     </>
   );
 }
