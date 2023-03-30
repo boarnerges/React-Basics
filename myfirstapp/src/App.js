@@ -13,12 +13,13 @@ function App() {
 
   const toggle = () => {
     console.log("Toggle Clicked");
+    setFlag(!flag);
   };
 
   return (
     <>
-      <button onClick={toggle}>Toggle Clock Component</button>
-      <Clock />
+      <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button>
+      {flag ? <Clock /> : "No Clock component"}
       {/* <Welcome user="Owolabi" />
       <Welcome user="James" />
       <Welcome user="Owolabi" /> */}
