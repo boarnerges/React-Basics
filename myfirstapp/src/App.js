@@ -5,6 +5,7 @@ import Clock from "./components/Clock";
 import { useState } from "react";
 import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
+import Form from "./components/Form";
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -44,7 +45,8 @@ function App() {
       {/* <Welcome user="Owolabi" />  */}
 
       {/* <LoginControl /> */}
-      <Blog posts={posts} />
+      {/* <Blog posts={posts} /> */}
+      <Form />
     </>
   );
 }
