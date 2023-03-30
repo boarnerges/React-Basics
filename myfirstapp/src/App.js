@@ -3,6 +3,7 @@ import "./App.css";
 import Welcome from "./components/Welcome";
 import Clock from "./components/Clock";
 import { useState } from "react";
+import LoginControl from "./components/LoginControl";
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -18,11 +19,13 @@ function App() {
 
   return (
     <>
-      <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button>
+      {/* <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button>
       {flag ? <Clock /> : "No Clock component"}
-      {/* <Welcome user="Owolabi" />
-      <Welcome user="James" />
-      <Welcome user="Owolabi" /> */}
+      {/* <Welcome user="Owolabi" /> */}
+      {/* <Welcome user="James" /> */}
+      {/* <Welcome user="Owolabi" />  */}
+
+      <LoginControl />
     </>
   );
 }
