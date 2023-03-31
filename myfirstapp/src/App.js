@@ -6,6 +6,8 @@ import { useState } from "react";
 import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
 import Form from "./components/Form";
+import Search from "./components/Search";
+import List from "./components/List";
 
 function App() {
   // const [flag, setFlag] = useState(true);
@@ -13,24 +15,52 @@ function App() {
   //   firstname: "Owolabi",
   //   lastname: "Olusegun",
   // };
+  const [searchTerm, setSearchTerm] = useState();
+  const handleSearch = (e) => {
+    setSearchTerm(e);
+  };
+  const posts = [
+    {
+      id: 1,
+      title: "Hello World",
+      content: "Welcome to learning React!",
+    },
+    {
+      id: 2,
+      title: "Installation",
+      content: "You can install React from npm",
+    },
+    {
+      id: 3,
+      title: "Run App",
+      content: "You can run React app with npm start",
+    },
 
-  // const posts = [
-  //   {
-  //     id: 1,
-  //     title: "Hello World",
-  //     content: "Welcome to learning React!",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Installation",
-  //     content: "You can install React from npm",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Run App",
-  //     content: "You can run React app with npm start",
-  //   },
-  // ];
+    {
+      id: 4,
+      title: "Build Components",
+      content: "You can run React app with npm start",
+    },
+
+    {
+      id: 5,
+      title: "Define States",
+      content: "You can run React app with npm start",
+    },
+
+    {
+      id: 3,
+      title: "React Hooks",
+      content: "You can run React app with npm start",
+    },
+
+    {
+      id: 3,
+      title: "Forms handling",
+      content: "You can run React app with npm start",
+    },
+  ];
+
   // const toggle = () => {
   //   console.log("Toggle Clicked");
   //   setFlag(!flag);
@@ -46,7 +76,9 @@ function App() {
 
       {/* <LoginControl /> */}
       {/* <Blog posts={posts} /> */}
-      <Form />
+      {/* <Form /> */}
+      <Search searchTerm={searchTerm} handleSearch={handleSearch} />
+      <List list={posts} />
     </>
   );
 }
