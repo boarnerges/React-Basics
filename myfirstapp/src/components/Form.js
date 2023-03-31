@@ -11,7 +11,7 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDeafult();
-    alert(JSON.stringify(formData, undefined, 2));
+    alert(JSON.stringify(formData));
   };
 
   return (
