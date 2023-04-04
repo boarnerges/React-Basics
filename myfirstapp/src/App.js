@@ -17,8 +17,9 @@ function App() {
   // };
   const [searchTerm, setSearchTerm] = useState();
   const handleSearch = (e) => {
-    setSearchTerm(e);
+    setSearchTerm(e.target.value);
   };
+
   const posts = [
     {
       id: 1,
@@ -61,6 +62,10 @@ function App() {
     },
   ];
 
+  const filterList = posts.filter((item) => {
+    return item.title.toLowerCase().includes(searchTerm);
+  });
+
   // const toggle = () => {
   //   console.log("Toggle Clicked");
   //   setFlag(!flag);
@@ -78,7 +83,7 @@ function App() {
       {/* <Blog posts={posts} /> */}
       {/* <Form /> */}
       <Search searchTerm={searchTerm} handleSearch={handleSearch} />
-      <List list={posts} />
+      <List list={filterList} />
     </>
   );
 }
