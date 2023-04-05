@@ -51,13 +51,13 @@ function App() {
     },
 
     {
-      id: 3,
+      id: 6,
       title: "React Hooks",
       content: "You can run React app with npm start",
     },
 
     {
-      id: 3,
+      id: 7,
       title: "Forms handling",
       content: "You can run React app with npm start",
     },
